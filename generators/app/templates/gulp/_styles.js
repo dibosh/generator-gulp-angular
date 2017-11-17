@@ -78,5 +78,6 @@ var buildStyles = function() {
 <% if (props.cssPreprocessor.key === 'ruby-sass') { -%>
     .pipe(cssFilter.restore)
 <% } -%>
+    .pipe($.replace('/bootstrap-sass/assets/fonts/', '/../bower_components/bootstrap-sass/assets/fonts/'))
     .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app/')));
 };
